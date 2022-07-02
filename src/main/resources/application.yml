@@ -1,0 +1,41 @@
+server:
+  port: 5050
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: admin123
+    url: jdbc:mysql://usermgmt.ci7bwsbk8lvk.ap-south-1.rds.amazonaws.com:3306/usermgmt
+    username: admin
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: vukkum55@gmail.com
+    password: bwjwahjomlmmgeaw
+    properties:
+      mail:
+        smtp:
+          starttls:
+            enable: true
+          auth: true
+      
+      app:
+        messages:
+               invalidCredentials: Credentials are invalid
+               accountLocked: Your accont is locked
+               regSuccess: Registration almost completed. Please check your email to proceed.
+               unlockSucc: Your account unlocked successfully
+               unlockFail: Failed to unlock account
+               regEmailSub: User Registration Successfull | Ashok IT
+               forgotPwdEmailSub: Forgot Password | Ashok IT
+               forgotPwdSucc: Email sent with password
+               forgotPwdFail: Enter Correct Email Id
+               regMailBodyFile: UNLOCK-ACC-EMAIL-BODY-TEMPLATE.txt
+               forgotPwdMailBodyFile: RECOVER-PASSWORD-EMAIL-BODY-TEMPLATE.txt               
+
