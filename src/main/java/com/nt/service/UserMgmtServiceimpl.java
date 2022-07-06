@@ -61,7 +61,7 @@ public class UserMgmtServiceimpl implements IUserMgmtService {
 		*/
 		
 		if(id==0) {
-			return "Credentials are Not Valid";
+			return "Credentials are Not at all Valid";
 		}
 		
 		if(status.equals("LOCKED")) {
