@@ -76,7 +76,7 @@ public class UserMgmtServiceimpl implements IUserMgmtService {
 	public String emailCheck(String emailId) {
 		Integer id=userRepo.checkEmail(emailId);
 		
-		return (id>1)?"Email Already Available":"Email IS UNIQUE" ;
+		return (id==1)?"Email Already Available":"Email IS UNIQUE" ;
 	}
 
 	@Override
